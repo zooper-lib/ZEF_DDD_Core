@@ -1,0 +1,21 @@
+name: zef_ddd_core
+description: A starting point for Dart libraries or applications.
+version: 0.0.1
+homepage: https://www.zooper.dev
+repository: https://github.com/zooper-lib/ZEF_DDD_Core
+topics:
+  - ddd
+  - domain-driven-design
+funding:
+  - https://buymeacoffee.com/zooperlib
+
+environment:
+  sdk: ^3.3.0
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.8.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
