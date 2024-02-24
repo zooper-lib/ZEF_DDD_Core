@@ -7,7 +7,8 @@ import 'example_classes/user_registration_welcome_email_handler.dart';
 void main() {
   // Create and register the listener with the dispatcher
   var welcomeEmailHandler = UserRegistrationWelcomeEmailHandler();
-  DomainEventDispatcher.instance.registerListener<UserRegisteredEvent>(welcomeEmailHandler);
+  DomainEventDispatcher.instance
+      .registerListener<UserRegisteredEvent>(welcomeEmailHandler);
 
   // Simulate user registration and creation of a UserRegisteredEvent
   var userId = UserId('456');

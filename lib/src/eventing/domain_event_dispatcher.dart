@@ -13,7 +13,8 @@ import 'package:zef_ddd_core/zef_ddd_core.dart';
 /// ```
 class DomainEventDispatcher {
   // Singleton instance, internally managed
-  static final DomainEventDispatcher _instance = DomainEventDispatcher._internal();
+  static final DomainEventDispatcher _instance =
+      DomainEventDispatcher._internal();
 
   // Instance variable to hold listeners
   final Map<Type, List<DomainEventListener<DomainEvent>>> _listeners = {};
@@ -34,7 +35,8 @@ class DomainEventDispatcher {
   /// - Parameters:
   ///   - `T`: The type of the domain event.
   ///   - `listener`: The event listener to be invoked on event dispatch.
-  void registerListener<T extends DomainEvent>(DomainEventListener<T> listener) {
+  void registerListener<T extends DomainEvent>(
+      DomainEventListener<T> listener) {
     final Type eventType = T;
 
     _listeners[eventType] ??= [];
@@ -52,7 +54,8 @@ class DomainEventDispatcher {
   ///
   /// - Returns: A future that completes when all event listeners have been invoked.
   Future<void> dispatch(DomainEvent event) async {
-    List<DomainEventListener<DomainEvent>>? eventListeners = _listeners[event.runtimeType];
+    List<DomainEventListener<DomainEvent>>? eventListeners =
+        _listeners[event.runtimeType];
     if (eventListeners != null) {
       for (var listener in eventListeners) {
         try {
@@ -84,9 +87,11 @@ class DomainEventDispatcher {
   /// ```
   /// DomainEventDispatcher.instance.unregisterListener<MyEvent>(myEventListener);
   /// ```
-  void unregisterListener<T extends DomainEvent>(DomainEventListener<T> listener) {
+  void unregisterListener<T extends DomainEvent>(
+      DomainEventListener<T> listener) {
     final Type eventType = T;
-    List<DomainEventListener<DomainEvent>>? eventListeners = _listeners[eventType];
+    List<DomainEventListener<DomainEvent>>? eventListeners =
+        _listeners[eventType];
 
     if (eventListeners != null) {
       eventListeners.remove(listener);

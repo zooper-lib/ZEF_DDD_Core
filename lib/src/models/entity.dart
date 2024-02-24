@@ -47,7 +47,8 @@ abstract class Entity<TId extends Id> {
   /// - Returns: `true` if the entities are considered equal, `false` otherwise.
   @override
   bool operator ==(Object other) =>
-      identical(this, other) || other is Entity && runtimeType == other.runtimeType && _id == other._id;
+      identical(this, other) ||
+      other is Entity && runtimeType == other.runtimeType && _id == other._id;
 
   /// Gets the hash code for the entity.
   ///

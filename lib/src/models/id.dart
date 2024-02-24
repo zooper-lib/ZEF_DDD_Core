@@ -40,7 +40,8 @@ abstract class Id<T> extends SingleTypeValueObject<T> {
   /// - Returns: `true` if the identifiers are considered equal, `false` otherwise.
   @override
   bool operator ==(Object other) =>
-      identical(this, other) || other is Id && runtimeType == other.runtimeType && value == other.value;
+      identical(this, other) ||
+      other is Id && runtimeType == other.runtimeType && value == other.value;
 
   /// Gets the hash code for the identifier.
   ///

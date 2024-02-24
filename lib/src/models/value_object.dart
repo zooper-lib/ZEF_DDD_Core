@@ -45,7 +45,9 @@ abstract class ValueObject {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is ValueObject && runtimeType == other.runtimeType && props.every((prop) => other.props.contains(prop));
+      other is ValueObject &&
+          runtimeType == other.runtimeType &&
+          props.every((prop) => other.props.contains(prop));
 
   /// Gets the hash code for the value object.
   ///

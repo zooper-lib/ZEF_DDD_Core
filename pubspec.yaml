@@ -6,15 +6,16 @@ repository: https://github.com/zooper-lib/ZEF_DDD_Core
 topics:
   - ddd
   - domain-driven-design
+  - clean-architecture
+  - domain-events
+  - eventing
 funding:
   - https://buymeacoffee.com/zooperlib
 
 environment:
   sdk: ^3.3.0
 
-# Add regular dependencies here.
 dependencies:
-  # path: ^1.8.0
 
 dev_dependencies:
   lints: ^3.0.0

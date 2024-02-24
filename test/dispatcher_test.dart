@@ -97,7 +97,8 @@ void main() {
       dispatcher.registerListener<MockEvent>(asyncListener);
     });
 
-    test('should wait for asynchronous operations in listeners to complete', () async {
+    test('should wait for asynchronous operations in listeners to complete',
+        () async {
       var event = MockEvent();
       await dispatcher.dispatch(event);
 
