@@ -1,5 +1,5 @@
 name: zef_ddd_core
-description: A starting point for Dart libraries or applications.
+description: A comprehensive Dart library designed to facilitate the implementation of Domain-Driven Design (DDD) principles in your applications
 version: 0.0.1
 homepage: https://www.zooper.dev
 repository: https://github.com/zooper-lib/ZEF_DDD_Core
